@@ -9,22 +9,22 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import pages.SauceDemoPage;
-import utils.driver;
+import utils.Driver;
 
 public class SauceDemoLoginTests {
 
 	@BeforeMethod
 	public void setup() {
-		driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
+		Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
 	}
 	
 	@AfterMethod
 	public void quitDriver() {
-		driver.quitDriver();
+		Driver.quitDriver();
 	}
 	@Test (dataProvider = "credential")
 	public void credentialTest(String username, String password) {
-		driver.getDriver().get("https://saucedemo.com");
+		Driver.getDriver().get("https://saucedemo.com");
 		
 		System.out.println(username + "  " + password);
 		

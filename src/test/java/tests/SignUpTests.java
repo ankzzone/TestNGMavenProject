@@ -9,19 +9,19 @@ import org.testng.annotations.Test;
 
 import pages.CommonPage;
 import pages.SignUpPage;
-import utils.driver;
-import utils.testDataReader;
+import utils.Driver;
+import utils.TestDataReader;
 
 public class SignUpTests {
 
 	@BeforeMethod(groups = {"smoke-test"})
 	public void setup() {
-		driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
+		Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
 	}
 	
 	@AfterMethod(groups = {"smoke-test"})
 	public void quitDriver() {
-		driver.quitDriver();
+		Driver.quitDriver();
 	}
 	
 	@Test
@@ -46,7 +46,7 @@ public class SignUpTests {
 		CommonPage commonpage = new CommonPage();
 		SignUpPage signuppage = new SignUpPage();
 		//when
-		driver.getDriver().get(testDataReader.getProperty("appurl"));
+		Driver.getDriver().get(TestDataReader.getProperty("appurl"));
 		// and click
 		Assert.assertTrue(commonpage.welcomeLink.isDisplayed());
 		commonpage.welcomeLink.click();
