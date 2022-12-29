@@ -10,18 +10,18 @@ import org.testng.annotations.Test;
 
 import pages.AmazonPage;
 import utils.ExcelUtils;
-import utils.driver;
+import utils.Driver;
 
 public class AmazonSearchWithExcel {
 
 	@BeforeMethod
 	public void setup() {
-		driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
+		Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
 	}
 	
 	@AfterMethod
 	public void quitDriver() {
-		driver.quitDriver();
+		Driver.quitDriver();
 	}
 	
 	
@@ -35,7 +35,7 @@ public class AmazonSearchWithExcel {
   @Test(dataProvider = "searchItem", enabled = true)
   public void AmazonSearchTest(String item) {
 	  AmazonPage amazonpage = new AmazonPage();
-	  driver.getDriver().get("https://amazon.com");
+	  Driver.getDriver().get("https://amazon.com");
 	  amazonpage.searchBox.sendKeys(item);
 	  amazonpage.searchBtn.click();
 	 
