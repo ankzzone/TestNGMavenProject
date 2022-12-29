@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 public class TestDataReader {
-
 private static Properties property;
 	
 	static {
@@ -15,16 +14,14 @@ private static Properties property;
 			property = new Properties();
 			property.load(input);
 			input.close();
-			
 		} catch (Exception e) {
 			e.printStackTrace();
-			
 		}
 		
 	}
-
+	
 	public static String getProperty(String key) {
 		return property.getProperty(key);
-		
 	}
+
 }

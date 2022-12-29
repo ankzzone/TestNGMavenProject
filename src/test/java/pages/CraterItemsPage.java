@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import utils.Driver;
 
 public class CraterItemsPage {
+	
 	public CraterItemsPage() {
 		PageFactory.initElements(Driver.getDriver(), this);
 	}
@@ -66,5 +67,6 @@ public class CraterItemsPage {
 	
 	@FindBy (xpath = "//p[text()='Item deleted successfully']")
 	public WebElement itemDeletedSuccessMessage;
+	
 	
 }

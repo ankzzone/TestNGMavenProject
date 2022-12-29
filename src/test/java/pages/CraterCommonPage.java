@@ -7,12 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 import utils.Driver;
 
 public class CraterCommonPage {
-
+	
 	public CraterCommonPage() {
 		PageFactory.initElements(Driver.getDriver(), this);
 	}
 	
 	@FindBy (xpath = "//a[contains(text(), 'Items')]")
 	public WebElement commonPageItemsLink;
-	
+
 }

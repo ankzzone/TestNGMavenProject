@@ -16,5 +16,4 @@ public class CraterDashboardPage {
 	@FindBy (xpath = "//span[text()='Amount Due']")
 	public WebElement amountDueText;
 
-
 }

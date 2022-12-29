@@ -2,9 +2,9 @@ package utils;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.sql.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.IndexedColors;
@@ -127,7 +127,7 @@ public class ExcelUtils {
 	// this method is for to get current time
 	public static String getCurrentTime() {
 		DateFormat dateFormat = new SimpleDateFormat("MMddyyyyHHmmss");
-		Date date = new Date(0);
+		Date date = new Date();
 		String date1 = dateFormat.format(date);
 		return date1;
 	}
@@ -139,5 +139,4 @@ public class ExcelUtils {
 
 	}
 
-	
 }

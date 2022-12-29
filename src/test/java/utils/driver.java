@@ -6,13 +6,14 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 import io.github.bonigarcia.wdm.managers.EdgeDriverManager;
 import io.github.bonigarcia.wdm.managers.FirefoxDriverManager;
 
 public class Driver {
+	
 public static WebDriver driver;
 	
 	public static WebDriver getDriver() {
@@ -56,9 +57,7 @@ public static WebDriver driver;
 				driver = new ChromeDriver(Options);
 				break;
 			}
-			
 		}
-		
 		return driver;
 	}
 	
@@ -67,20 +66,5 @@ public static WebDriver driver;
 			driver.quit();
 			driver = null;
 		}
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 }
